@@ -20,6 +20,10 @@ import java.util.Arrays;
 
 public class HeightChecker_easy_1051 {
     public int heightChecker(int[] heights) {
+        /*
+        * Time complexity - O(N log N)
+        * Space complexity - O(n)
+        * */
         if (heights == null || heights.length == 0) return 0;
 
         var sortedHeights = Arrays.copyOf(heights, heights.length);

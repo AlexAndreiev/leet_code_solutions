@@ -16,6 +16,11 @@ This is consistent to C's strstr() and Java's indexOf().
 
 public class ImplementStrStr_easy_28 {
     public int strStr(String haystack, String needle) {
+
+        /*
+        * Time complexity - O(n)
+        * Space complexity - O(1)
+        * */
         if (haystack == null || needle == null || needle.isEmpty())
             return 0;
         int haystackLen = haystack.length();
