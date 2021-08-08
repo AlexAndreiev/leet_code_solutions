@@ -16,6 +16,10 @@ import com.alex.andreiev.utils.ListNode;
 public class DeleteNodeInALinkedList_easy_237 {
 
     public void deleteNode(ListNode node) {
+        /*
+        * Time complexity - O(1)
+        * Space complexity - O(1)
+        * */
         node.val = node.next.val;
         node.next = node.next.next;
     }
