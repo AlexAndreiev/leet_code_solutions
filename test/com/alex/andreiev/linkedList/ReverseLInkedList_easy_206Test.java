@@ -14,6 +14,6 @@ class ReverseLInkedList_easy_206Test {
         var root = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
         var actual = target.reverseList(root);
         var expected = new ListNode(5, new ListNode(4, new ListNode(3, new ListNode(2, new ListNode(1)))));
-        assertTrue(LinkedListUtils.isListChecked(expected, actual));
+        assertTrue(LinkedListUtils.isLinkedListEqual(expected, actual));
     }
 }
