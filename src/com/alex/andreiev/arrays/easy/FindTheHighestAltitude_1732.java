@@ -34,6 +34,15 @@ Getting the altitudes can be done by getting the prefix sum array of the given a
 public class FindTheHighestAltitude_1732 {
 
     public int largestAltitude(int[] gain) {
+        var max = 0;
+        var cur = 0;
+        for (var num: gain) {
+            cur += num;
+            if (cur > max) {
+                max = cur;
+            }
+        }
 
+        return max;
     }
 }
