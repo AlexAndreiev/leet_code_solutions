@@ -1,4 +1,4 @@
-package com.alex.andreiev.string;
+package com.alex.andreiev.string.easy;
 
 import java.util.HashMap;
 
