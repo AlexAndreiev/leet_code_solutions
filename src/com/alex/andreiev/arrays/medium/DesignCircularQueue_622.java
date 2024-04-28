@@ -41,12 +41,9 @@ public class DesignCircularQueue_622 {
 
         if (isEmpty()) {
             start = 0;
-            end = 0;
-        } else {
-            end = end == buffer.length-1 ? 0 : end + 1;
         }
 
-
+        end = (end + 1) % buffer.length;
         buffer[end] = value;
         return true;
     }
@@ -59,9 +56,9 @@ public class DesignCircularQueue_622 {
         if (start == end) {
             start = -1;
             end = -1;
-        } else {
-            start = start == buffer.length-1 ? 0 : start + 1;
         }
+
+        start = (start + 1) % buffer.length;
 
         return true;
     }
@@ -75,10 +72,10 @@ public class DesignCircularQueue_622 {
     }
 
     public boolean isEmpty() {
-        return start == -1 && end == -1;
+        return start == -1;
     }
 
     public boolean isFull() {
-        return start - end == 1 || (start == 0 && end == buffer.length-1);
+        return ((end + 1) % buffer.length) == start;
     }
 }
