@@ -31,16 +31,37 @@ We could remember when all of them occur next.
 import java.util.Stack;
 
 public class DailyTemperature_739 {
+
+    // dp
     public int[] dailyTemperatures(int[] temperatures) {
-        var results = new int[temperatures.length];
-        var stack = new Stack<Integer>();
-        for (var i = 0; i < temperatures.length; i++) {
-            while (!stack.isEmpty() && temperatures[stack.peek()] < temperatures[i]) {
-                results[stack.peek()] = i - stack.pop();
+        var answer = new int[temperatures.length];
+        var hot = Integer.MIN_VALUE;
+        for (var i = temperatures.length - 1; i >= 0; --i) {
+            if (hot > temperatures[i]) {
+                var days = 1;
+                while (temperatures[i + days] <= temperatures[i]) {
+                    days += answer[i + days];
+                }
+                answer[i] = days;
+            } else {
+                hot = temperatures[i];
             }
-            stack.push(i);
         }
 
-        return results;
+        return answer;
     }
+
+    // stack
+//    public int[] dailyTemperatures(int[] temperatures) {
+//        var results = new int[temperatures.length];
+//        var stack = new Stack<Integer>();
+//        for (var i = 0; i < temperatures.length; i++) {
+//            while (!stack.isEmpty() && temperatures[stack.peek()] < temperatures[i]) {
+//                results[stack.peek()] = i - stack.pop();
+//            }
+//            stack.push(i);
+//        }
+//
+//        return results;
+//    }
 }
