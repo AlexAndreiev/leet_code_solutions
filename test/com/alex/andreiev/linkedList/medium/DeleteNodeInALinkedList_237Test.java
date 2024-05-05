@@ -1,4 +1,4 @@
-package com.alex.andreiev.linkedList.easy;
+package com.alex.andreiev.linkedList.medium;
 
 import com.alex.andreiev.utils.ListNode;
 import org.junit.jupiter.api.Test;
