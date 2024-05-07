@@ -10,18 +10,15 @@ class DeleteTheMiddleNodeOfALinkedList_2095Test {
     @Test
     void deleteMiddle() {
         var target = new DeleteTheMiddleNodeOfALinkedList_2095();
-        var input = new ListNode(1, new ListNode(3, new ListNode(4,
-            new ListNode(7, new ListNode(1, new ListNode(2, new ListNode(6)))))));
-        var expected = new ListNode(1, new ListNode(3, new ListNode(4,
-            new ListNode(1, new ListNode(2, new ListNode(6))))));
+        var input = ListNode.getNodes(1, 3, 4, 7, 1, 2, 6);
+        var expected = ListNode.getNodes(1, 3, 4, 1, 2, 6);
         assertEquals(expected, target.deleteMiddle(input));
 
-        input = new ListNode(1, new ListNode(2, new ListNode(3,
-            new ListNode(4))));
-        expected = new ListNode(1, new ListNode(2, new ListNode(4)));
+        input = ListNode.getNodes(1, 2, 3, 4);
+        expected = ListNode.getNodes(1, 2, 4);
         assertEquals(expected, target.deleteMiddle(input));
 
-        input = new ListNode(2, new ListNode(1));
+        input = ListNode.getNodes(2, 1);
         expected = new ListNode(2);
         assertEquals(expected, target.deleteMiddle(input));
     }

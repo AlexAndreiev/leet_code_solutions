@@ -10,19 +10,13 @@ class OddEvenLinkedList_328Test {
     @Test
     void oddEvenList() {
         var target = new OddEvenLinkedList_328();
-        var input = new ListNode(1, new ListNode(2, new ListNode(3,
-            new ListNode(4, new ListNode(5)))));
-        var expected = new ListNode(1, new ListNode(3, new ListNode(5,
-            new ListNode(2, new ListNode(4)))));
+        var input = ListNode.getNodes(1, 2, 3, 4, 5);
+        var expected = ListNode.getNodes(1, 3, 5, 2, 4);
         assertEquals(expected, target.oddEvenList(input));
 
 
-        input = new ListNode(2, new ListNode(1, new ListNode(3,
-            new ListNode(5, new ListNode(6, new ListNode(4,
-                new ListNode(7)))))));
-        expected = new ListNode(2, new ListNode(3, new ListNode(6,
-            new ListNode(7, new ListNode(1, new ListNode(5,
-                new ListNode(4)))))));
+        input = ListNode.getNodes(2, 1, 3, 5, 6, 4, 7);
+        expected = ListNode.getNodes(2, 3, 6, 7, 1, 5, 4);
         assertEquals(expected, target.oddEvenList(input));
 
         assertNull(target.oddEvenList(null));

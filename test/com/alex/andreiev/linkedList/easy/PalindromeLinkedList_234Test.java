@@ -10,13 +10,13 @@ class PalindromeLinkedList_234Test {
     @Test
     void isPalindrome() {
         var target = new PalindromeLinkedList_234();
-        var head = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))));
+        var head = ListNode.getNodes(1, 2, 2, 1);
         assertTrue(target.isPalindrome(head));
 
-        head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(2, new ListNode(1)))));
+        head = ListNode.getNodes(1, 2, 3, 2, 1);
         assertTrue(target.isPalindrome(head));
 
-        head = new ListNode(1, new ListNode(2));
+        head = ListNode.getNodes(1, 2);
         assertFalse(target.isPalindrome(head));
     }
 }

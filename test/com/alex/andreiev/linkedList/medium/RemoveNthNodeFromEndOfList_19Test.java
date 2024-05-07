@@ -11,16 +11,16 @@ class RemoveNthNodeFromEndOfList_19Test {
     @Test
     void removeNthFromEnd() {
         var target = new RemoveNthNodeFromEndOfList_19();
-        var head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        var head = ListNode.getNodes(1, 2, 3, 4, 5);
         head = target.removeNthFromEnd(head, 2);
-        var expected = new ListNode(1, new ListNode(3, new ListNode(4, new ListNode(5))));
+        var expected = ListNode.getNodes(1, 3, 4, 5);
         assertTrue(LinkedListUtils.isLinkedListEqual(expected, head));
 
         head = new ListNode(1);
         head = target.removeNthFromEnd(head, 1);
         assertNull(head);
 
-        head = new ListNode(1, new ListNode(2));
+        head = ListNode.getNodes (1, 2);
         head = target.removeNthFromEnd(head, 1);
         expected = new ListNode(1);
         assertTrue(LinkedListUtils.isLinkedListEqual(expected, head));

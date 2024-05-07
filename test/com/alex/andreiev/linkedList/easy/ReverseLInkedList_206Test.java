@@ -11,9 +11,9 @@ class ReverseLInkedList_206Test {
     @Test
     void reverseList() {
         var target = new ReverseLInkedList_206();
-        var root = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        var root = ListNode.getNodes(1, 2, 3, 4, 5);
         var actual = target.reverseList(root);
-        var expected = new ListNode(5, new ListNode(4, new ListNode(3, new ListNode(2, new ListNode(1)))));
+        var expected = ListNode.getNodes(5, 4, 3, 2, 1);
         assertTrue(LinkedListUtils.isLinkedListEqual(expected, actual));
     }
 }

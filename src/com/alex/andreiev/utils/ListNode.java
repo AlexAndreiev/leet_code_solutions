@@ -41,4 +41,12 @@ public class ListNode {
 
         return true;
     }
+
+    static public ListNode getNodes(int ... values) {
+        ListNode head = null;
+        for (var i = values.length - 1; i >= 0 ; i--) {
+            head = new ListNode(values[i], head);
+        }
+        return head;
+    }
 }
