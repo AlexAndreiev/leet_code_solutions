@@ -1,4 +1,4 @@
-package com.alex.andreiev.people.ai;
+package com.alex.andreiev.companies.people.ai;
 
 import java.util.*;
 

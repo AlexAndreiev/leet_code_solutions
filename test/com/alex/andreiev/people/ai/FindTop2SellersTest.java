@@ -1,5 +1,6 @@
 package com.alex.andreiev.people.ai;
 
+import com.alex.andreiev.companies.people.ai.FindTop2Sellers;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
