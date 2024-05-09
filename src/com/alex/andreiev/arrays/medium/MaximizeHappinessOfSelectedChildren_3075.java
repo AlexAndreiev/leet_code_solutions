@@ -41,7 +41,12 @@ Constraints:
     1 <= happiness[i] <= 108
     1 <= k <= n
 
-
+Hint 1
+Since all the unselected numbers are decreasing at the same rate, we should greedily select k largest values.
+Hint 2
+The ith largest number (i = 1, 2, 3,…k) should decrease by (i - 1) when it is picked.
+Hint 3
+Add 0 if the decreased value is negative.
  */
 
 import java.util.Arrays;
