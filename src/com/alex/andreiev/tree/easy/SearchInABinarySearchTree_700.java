@@ -34,11 +34,11 @@ public class SearchInABinarySearchTree_700 {
                 return node;
             }
 
-            if (node.left != null) {
+            if (node.val > val && node.left != null) {
                 queue.offer(node.left);
             }
 
-            if (node.right != null) {
+            if (node.val < val && node.right != null) {
                 queue.offer(node.right);
             }
         }
