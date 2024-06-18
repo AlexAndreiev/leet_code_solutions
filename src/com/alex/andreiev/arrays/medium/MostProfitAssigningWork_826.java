@@ -38,7 +38,7 @@ public class MostProfitAssigningWork_826 {
 
         // Sort both worker and jobProfile arrays
         Arrays.sort(worker);
-        jobProfile.sort((a, b) -> Integer.compare(a[0], b[0]));
+        jobProfile.sort(Comparator.comparingInt(a -> a[0]));
 
         int netProfit = 0, maxProfit = 0, index = 0;
         for (int i = 0; i < worker.length; i++) {
