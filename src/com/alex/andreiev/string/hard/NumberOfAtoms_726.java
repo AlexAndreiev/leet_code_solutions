@@ -37,6 +37,13 @@ Constraints:
     1 <= formula.length <= 1000
     formula consists of English letters, digits, '(', and ')'.
     formula is always valid.
+
+Hint 1
+To parse formula[i:], when we see a `'('`, we will parse recursively whatever is inside the brackets
+(up to the correct closing ending bracket) and add it to our count,
+multiplying by the following multiplicity if there is one.
+Otherwise, we should see an uppercase character: we will parse the rest of the letters to get the name,
+and add that (plus the multiplicity if there is one.)
  */
 
 import java.util.*;
