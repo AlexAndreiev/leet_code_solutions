@@ -32,6 +32,11 @@ Constraints:
     1 <= nums.length <= 1000
     1 <= nums[i] <= 100
     1 <= left <= right <= n * (n + 1) / 2
+
+Hint 1
+Compute all sums and save it in array.
+Hint 2
+Then just go from LEFT to RIGHT index and calculate answer modulo 1e9 + 7.
  */
 public class RangeSumOfSortedSubarraySums_1508 {
     final long MOD = 1_000_000_007;
